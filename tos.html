@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="menu-container"></div>
+      </header>
+    
+    <h1>Terms of Service</h1>  
+        <p>These terms of service ("Terms") outline the use of the educational resources provided on this website. By using our resources, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our resources.</p>
+
+    <h1>Edationucal Use Only:</h1>
+        <p>All resources, including but not limited to text, images, videos, and any other materials available on this website, are intended for educational purposes only. They are provided to facilitate learning and knowledge sharing.</p>
+
+    <h1>Non-Commercial Use:</h1>
+        <p>You may use these resources for non-commercial purposes only. This means you are allowed to use our materials for educational projects, research, personal development, or other non-commercial activities.</p>
+
+    <h1>No Sale or Commercial Exploitation:</h1>
+        <p>You may not sell, resell, or exploit our resources for commercial purposes. This includes, but is not limited to, selling or distributing our materials, using them for monetary gain, or incorporating them into products or services that are intended for sale.</p>
+
+    <h1>Attribution:</h1>
+        <p>If you choose to use our resources in your work or projects, proper attribution is appreciated. This means acknowledging the source and providing credit to this website.</p>
+
+    <h1>Changes to Terms:</h1>
+        <p>We reserve the right to modify these Terms at any time. It is your responsibility to review these Terms periodically. Continued use of our resources after any changes shall constitute your consent to such changes.</p>
+
+    <h1>Termination:</h1>
+        <p>We reserve the right to terminate your access to our resources if we believe you have violated these Terms.</p>
+
+    <h1>Contact Us:</h1>
+        <p>If you have any questions or concerns about these Terms, please feel free to contact us.</p>
+
+
+
+    <footer>
+        <div id="footer-container"></div>
+    </footer>
+
+    <script>
+        // Load and include the menu
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(menuHtml => {
+                document.getElementById('menu-container').innerHTML = menuHtml;
+            });
+
+        // Load and include the footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(footerHtml => {
+                document.getElementById('footer-container').innerHTML = footerHtml;
+            });
+    </script>
+</body>
+</html>

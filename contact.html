@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DoBu Martial Arts Contact Us</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    </head>
+
+    <body id="contactbackground">
+        <header>
+            <div class="menu-container"></div>
+        </header>
+        
+
+        <h2>Contact Us</h2>
+        <p>For any inquiries or to visit our location, you can find us here:</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2875.107067894964!2d103.89117398598351!3d1.3188409839059523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da18188d9cbf0f%3A0x366088767c724265!2sLifelong%20Learning%20Institute%20-%20Learning%20Hub%20in%20Singapore!5e1!3m2!1sen!2sph!4v1697612370385!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <h3>Talk to US</h3>
+        <dl>
+            <dt>Physical address</dt>
+            <dd>11 Eunos Rd 8, #07-02 Lifelong Learning Institute, Singapore 408601</dd>
+            <dt>Phone number</dt>
+            <dd>+65 6324 9730</dd>
+            <dt>Fax number</dt>
+            <dd>+65 6324 9730</dd>
+            <dt>Email address</dt>
+            <dd>contact@dobumartialarts.com</dd>
+        </dl>
+
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/YourPage" target="_blank" class="social-icon">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/YourPage" target="_blank" class="social-icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/YourPage" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <h3>Connect with Us</h3>
+        <form>
+            <label for="email">Email address:</label>
+            <input type="email" id="email" name="email"><br>
+            <textarea name="message" style="width: 200px; height: 600px;">Tell us what you think!</textarea><br>
+            <label for="submit"></label>
+            <input type="button" value="Send">
+        </form>
+        
+        <footer>
+            <div class="footer-container"></div>
+        </footer>
+
+        <script>
+            $(document).ready(function() {
+                $(".menu-container").load("menu.html");
+                $(".footer-container").load("footer.html");
+            });
+        </script>
+    </body>
+</html>
