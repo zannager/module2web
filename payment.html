@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <header>
+        <div class="menu-container"></div>
+    </header>
+
+    
+    <div class="payment-section">
+        <h2>Become a Member</h2>
+        <form id="paymentForm">
+            <label for="planSelect">Select a Plan:</label>
+            <select id="planSelect" onchange="updatePrice()">
+                <option value="" disabled selected>Select your plan</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+                <option value="Elite">Elite</option>
+                <option value="Junior">Junior membership</option>
+            </select><br>
+    
+            <p>Price: £<span id="selectedPrice">0.00</span></p>
+    
+            <label for="additionalServices">Select Additional Services:</label>
+            <div id="additionalServices">
+                <input type="checkbox" id="privateTuition" value="PrivateTuition" onclick="updatePrice()">
+                <label for="privateTuition">Private martial arts tuition - per hour (£15.00)</label><br>
+    
+                <input type="checkbox" id="selfDefense" value="SelfDefense" onclick="updatePrice()">
+                <label for="selfDefense">Six-week beginners' self-defense course (2 x 1-hour session per week) (£180.00)</label><br>
+    
+                <input type="checkbox" id="fitnessRoom" value="FitnessRoom" onclick="updatePrice()">
+                <label for="fitnessRoom">Use of fitness room - per visit (£6.00)</label><br>
+    
+                <input type="checkbox" id="fitnessTraining" value="FitnessTraining" onclick="updatePrice()">
+                <label for="fitnessTraining">Personal fitness training - per hour (£35.00)</label><br>
+            </div><br><br>
+    
+            <label for="totalAmount">Total Amount:</label>
+            <span>£<span id="totalAmount">0.00</span></span><br><br><br>
+    
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" placeholder="Card Number" required><br>
+    
+            <label for="expirationDate">Expiration Date:</label>
+            <input type="text" id="expirationDate" placeholder="MM/YY" required><br>
+    
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" placeholder="CVV" required><br>
+    
+            <button type="submit">Submit Payment</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-container"></div>
+    </footer>
+   
+
+    <script>
+        $(document).ready(function() {
+            $(".menu-container").load("menu.html");
+            $(".footer-container").load("footer.html");
+        });
+
+        const planPrices = {
+            Beginner: 25.00,
+            Intermediate: 35.00,
+            Advanced: 45.00,
+            Elite: 60.00,
+            Junior: 25.00,
+        };
+        const additionalServices = {
+            PrivateTuition: 15.00,
+            SelfDefense: 180.00,
+            FitnessRoom: 6.00,
+            FitnessTraining: 35.00,
+        };
+
+        // Function to update the price when the dropdown selection changes
+        function updatePrice() {
+            const planSelect = document.getElementById('planSelect');
+            const selectedPlan = planSelect.value;
+            const selectedPlanPrice = parseFloat(planPrices[selectedPlan] || 0);
+
+            const additionalServicesCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            let totalAdditionalServicesPrice = 0;
+
+            additionalServicesCheckboxes.forEach(function (checkbox) {
+                const servicePrice = additionalServices[checkbox.value];
+                totalAdditionalServicesPrice += parseFloat(servicePrice);
+            });
+
+            const totalPrice = selectedPlanPrice + totalAdditionalServicesPrice;
+
+            document.getElementById('selectedPrice').textContent = selectedPlanPrice.toFixed(2);
+            document.getElementById('totalAmount').textContent = totalPrice.toFixed(2);
+        }
+    </script>
+</body>
+</html>
