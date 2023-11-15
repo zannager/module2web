@@ -5,6 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DoBu Martial Arts Schedule</title>
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <title>jQuery UI Datepicker - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+  
     </head>
 
     <body id="schedulebackground">
@@ -12,8 +23,8 @@
             <div class="menu-container"></div>
         </header>
         
-        <h2>Martial Arts Class Schedule</h2>
-        <table>
+        <h2 id="schedule">Martial Arts Class Schedule</h2>
+        <table class="schedule-table">
             <tr>
                 <th>Time</th>
                 <th>Monday</th>
@@ -95,6 +106,8 @@
                 <td></td>
             </tr>
         </table>
+
+        <p style="text-align: center; margin-bottom: 100px;">Select your Schedule: <input type="text" id="datepicker"></p>
 
         <footer>
             <div class="footer-container"></div>
