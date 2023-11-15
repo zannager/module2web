@@ -1,89 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DoBu Martial Arts Home</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-</head>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DoBu Martial Arts Home</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
 
-<body id="homebackground">
-  <header>
-    <div class="menu-container"></div>
-  </header>
-<div class="content-container">
-    <div class="left-content">
-        <div class="content-box">
-            <h1>"Elevating Lives, Forging a Global Legacy"</h1>
-            <h2>...transforming mind and body</h2>
-          </div>
-    </div>
-    
-    <div class="right-content">
-        <div class="form-container">
-            <form>
-                <label class="membership">Become a member</label><br><br>
-                
-                <div class="box-label">
-                    <div class="input-label">
-                        <label>Full name</label>
-                        <input type="text" id="name" name="name"><br><br>
-                    </div>
-                    <div class="input-label">
-                        <label>Email address</label>
-                    <input type="email" id="email" name="email" required><br><br>
-                    </div>
-                    <div class="input-label">
-                        <label>Password</label>
-                    <input type="password" id="password" name="password" required><br><br>
-                    </div>
-                    <div class="input-label">
-                        <label>Confirm password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required><br><br><br>
-                    </div>
-
-                    <div class="join">
-                        <input type="submit" value="Join Us">
-                    </div>
-                </div>
-                
+    <body id="homebackground">
+    <header>
+        <div class="menu-container"></div>
+    </header>
+    <div class="content-container">
+        <div class="left-content">
+            <div class="content-box">
+                <h1 id="animatedH1">"Elevating Lives, Forging a Global Legacy"</h1>
+                <h2>...transforming mind and body</h2>
+            </div>
+        </div><br>
         
-                
-            </form>
-          </div>
-    </div>
+            <p class="membership">Become a member? <a href="payment.html"><b>Click here</b></a></p>
+            
         
-      
-</div>
-  
-   
-
-    <h2 id="subtitle">Our Facilites</h2>
-    <div class="faci">
-        <img src="Images/facilities1.jpg" alt="Image of a large and matted martial arts area" width="450" height="450">
-        <img src="Images/facilities2.jpg" alt="Image of a fully equipled gyme" width="450" height="450">
-        <img src="Images/facilities3.jpg" alt="Image of the gym with a sauna, a steam room and changing and shower" width="450" height="450">
     </div>
+        <h2 id="subtitle">Our Facilites</h2>
+        <div class="faci">
+            <img src="Images/facilities1.jpg" alt="Image of a large and matted martial arts area" width="450" height="450">
+            <img src="Images/facilities2.jpg" alt="Image of a fully equipled gyme" width="450" height="450">
+            <img src="Images/facilities3.jpg" alt="Image of the gym with a sauna, a steam room and changing and shower" width="450" height="450">
+        </div>
 
-    <h2 id="subtitle">Our Sponsors</h2>
-    <div class="sponsor">
-        <a href="https://www.google.com/" target="_blank"><img src="Images/google.jpg" alt="Sponsor 1" width="100" height="100"></a>
-        <a href="https://www.pinterest.com/" target="_blank"><img src="Images/pinterest.png" alt="Sponsor 2" width="100" height="100"></a>
-        <a href="https://www.w3schools.com/" target="_blank"><img src="Images/W3.png" alt="Sponsor 3" width="100" height="100"></a>
-        <a href="https://www.codecademy.com/" target="_blank"><img src="Images/codeacademy.jpg" alt="Sponsor 4" width="100" height="100"></a>
-        <a href="https://www.youtube.com/" target="_blank"><img src="Images/youtube.png" alt="Sponsor 5" width="100" height="100"></a>
-    </div>
+        <h2 id="subtitle">Our Sponsors</h2>
+        <div class="sponsor">
+            <a href="https://www.google.com/" target="_blank"><img src="Images/google.jpg" alt="Sponsor 1" width="100" height="100"></a>
+            <a href="https://www.pinterest.com/" target="_blank"><img src="Images/pinterest.png" alt="Sponsor 2" width="100" height="100"></a>
+            <a href="https://www.w3schools.com/" target="_blank"><img src="Images/W3.png" alt="Sponsor 3" width="100" height="100"></a>
+            <a href="https://www.codecademy.com/" target="_blank"><img src="Images/codeacademy.jpg" alt="Sponsor 4" width="100" height="100"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="Images/youtube.png" alt="Sponsor 5" width="100" height="100"></a>
+        </div>
 
-    <footer>
-        <div class="footer-container"></div>
-    </footer>
+        <footer>
+            <div class="footer-container"></div>
+        </footer>
 
-    <script>
-        $(document).ready(function() {
-            $(".menu-container").load("menu.html");
-            $(".footer-container").load("footer.html");
-        });
-    </script>
-</body>
-</html>
+        <script>
+            $(document).ready(function() {
+                $(".menu-container").load("menu.html");
+                $(".footer-container").load("footer.html");
+            });
+        </script>
+    </body>
+    </html>
