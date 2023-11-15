@@ -1,88 +1,101 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DoBu Martial Arts Pricing</title>
-        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoBu Martial Arts Pricing</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
 
-    <body id="pricingbackground">
-        <header>
-            <div class="menu-container"></div>
-        </header>
+<body id="pricingbackground">
+    <header>
+        <div class="menu-container"></div>
+    </header>
+    
+    <h2 id="plan">Membership Plan</h2>
+    <table class="pricing-table">
+        <tr>
+            <th>Member Type</th>
+            <th>Martial Art Count</th>
+            <th>Sessions Per Week</th>
+            <th>Monthly Fee</th>
+
+        </tr>
+        <tr>
+            <td>Beginner</td>
+            <td>1 MA of your choice</td>
+            <td>2</td>
+            <td>£25.00</td>
+            <td><button class="buy-button" onclick="buyPlan()">Buy</button></td>
+        </tr>
+        <tr>
+            <td>Intermediate</td>
+            <td>1 MA of your choice</td>
+            <td>3</td>
+            <td>£35.00</td>
+            <td><button class="buy-button" onclick="buyPlan()">Buy</button></td>
+        </tr>
+        <tr>
+            <td>Advanced</td>
+            <td>2 MA of your choice</td>
+            <td>5</td>
+            <td>£45.00</td>
+            <td><button class="buy-button" onclick="buyPlan()">Buy</button></td>
+        </tr>
+        <tr>
+            <td>Elite</td>
+            <td>Unlimited</td>
+            <td>Unlimited</td>
+            <td>£60.00</td>
+            <td><button class="buy-button" onclick="buyPlan()">Buy</button></td>
+        </tr>
+        <tr>
+            <td colspan="3">Junior membership - can attend all-kids martial arts sessions</td>
+            <td>£25.00</td>
+            <td><button class="buy-button" onclick="buyPlan()">Buy</button></td>
+        </tr>
+        <tr>
+            <td colspan="3">Private martial arts tuition - per hour</td>
+            <td>£15.00</td>
+        </tr>
+    </table>
         
-        <h2>Membership Plan</h2>
-        <table>
-            <tr>
-                <th>Member Type</th>
-                <th>Martial Art Count</th>
-                <th>Sessions Per Week</th>
-                <th>Monthly Fee</th>
-            </tr>
-            <tr>
-                <td>Beginner</td>
-                <td>1 MA of your choice</td>
-                <td>2</td>
-                <td>£25.00</td>
-            </tr>
-            <tr>
-                <td>Intermediate</td>
-                <td>1 MA of your choice</td>
-                <td>3</td>
-                <td>£35.00</td>
-            </tr>
-            <tr>
-                <td>Advanced</td>
-                <td>2 MA of your choice</td>
-                <td>5</td>
-                <td>£45.00</td>
-            </tr>
-            <tr>
-                <td>Elite</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
-                <td>£60.00</td>
-            </tr>
-            <tr>
-                <td colspan="3">Private martial arts tuition - per hour</td>
-                <td>£15.00</td>
-            </tr>
-            <tr>
-                <td colspan="3">Junior membership - can attend all-kids martial arts sessions</td>
-                <td>£25.00</td>
-            </tr>
-        </table>
+    <table class="special">
+        <tr>
+            <th>Specialist courses and fitness training</th>
+            <th>Fee</th>
             
-        <table>
-            <tr>
-                <th colspan="2">Specialist courses and fitness training</th>
-                <th>Fee</th>
-            </tr>
-            <tr>
-                <td>Six-week beginners' self-defense course (2 x 1-hour session per week)</td>
-                <td>180.00</td>
-            </tr>
-            <tr>
-                <td>Use of fitness room - per visit</td>
-                <td>6.00</td>
-            </tr>
-            <tr>
-                <td>Personal fitness training - per hour</td>
-                <td>35.00</td>
-            </tr>
-        </table>
+        </tr>
+        <tr>
+            <td>Six-week beginners' self-defense course (2 x 1-hour session per week)</td>
+            <td>£180.00</td>
+            <td><button class="buy-button" onclick="buyPlan()">Buy</button></td>
+        </tr>
+        <tr>
+            <td>Use of fitness room - per visit</td>
+            <td>£6.00</td>
+            <td><button class="buy-button" onclick="buyPlan()">Buy</button></td>
+        </tr>
+        <tr>
+            <td>Personal fitness training - per hour</td>
+            <td>£35.00</td>
+            <td><button class="buy-button" onclick="buyPlan()">Buy</button></td>
+        </tr>
+    </table>
 
-        
-        <footer>
-            <div class="footer-container"></div>
-        </footer>
+    <footer>
+        <div class="footer-container"></div>
+    </footer>
 
-        <script>
-            $(document).ready(function() {
-                $(".menu-container").load("menu.html");
-                $(".footer-container").load("footer.html");
-            });
-        </script>
-    </body>
+    <script>
+        function buyPlan() {
+            window.location.href =  `payment.html?plan=${plan}`;
+        }
+
+        $(document).ready(function() {
+            $(".menu-container").load("menu.html");
+            $(".footer-container").load("footer.html");
+        });
+    </script>
+</body>
 </html>
